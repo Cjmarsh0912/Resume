@@ -1,0 +1,184 @@
+/* 1. General Styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: black;
+    border-color: black;
+}
+
+header {
+    font-size: var(--fnt-size-medium);
+    font-family: var(--fnt-family-Merriweather);
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+p {
+    font-family: var(--fnt-family-Open-Sans);
+    font-size: var(--fnt-size-small);
+}
+
+.title {
+    font-size: var(--fnt-size-lrg);
+    font-family: var(--fnt-family-Open-Sans);
+    margin-bottom: .5em;
+    color: #ea526f;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+span {
+    font-weight: 100;
+}
+
+:root {
+    --fnt-family-Open-Sans: 'Open Sans', sans-serif;
+    --fnt-family-Merriweather: 'Merriweather' sans-serif;
+
+    --fnt-size-small: 1.1rem;
+    --fnt-size-medium: 1.5rem;
+    --fnt-size-lrg: 1.8rem;
+
+    --fnt-color-white: white;
+    --fnt-color-black: black;
+}
+
+/* 2. Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    gap: 3em;
+    font-family: var(--fnt-family-Open-Sans);
+    font-size: 1rem;
+    background-color: #23B5D3;
+    border-bottom: 2px solid black;
+    color: var(--fnt-color-white);
+}
+
+.header>* {
+    flex: 1 1 100%;
+}
+
+img {
+    max-width: 20em;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 0 0 1em;
+}
+
+.header div:nth-child(2) {
+    font-family: var(--fnt-family-Merriweather);
+    text-align: center;
+    color: var(--fnt-color-black);
+}
+
+.header div>h1 {
+    white-space: nowrap;
+    font-size: 4rem;
+}
+
+.header div>p {
+    font-size: var(--fnt-size-small);
+}
+
+.contact ul li {
+    list-style-type: none;
+    font-size: var(--fnt-size-small);
+    text-align: start;
+}
+
+.contact a {
+    color: white;
+    transition: font-size .5s;
+}
+
+.contact a:hover {
+    font-size: 1.3rem;
+}
+
+/*  3. Intro */
+
+/* 4. Skills */
+.skills {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*  4.1. Personal */
+.personal {
+    width: 100ch;
+    margin-bottom: 1em;
+}
+
+.personal ul li {
+    list-style-type: disc;
+    margin-bottom: 1em;
+}
+
+/*  4.2. Programming */
+.programming {
+    display: flex;
+    justify-content: center;
+}
+
+.programming ul {
+    border-right: 2px solid black;
+    margin-right: 2em;
+    padding-right: 2em;
+}
+
+.programming ul:last-child {
+    border-right: none;
+}
+
+/*  5. Experience */
+.experience {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: .5em 1.5em;
+}
+
+.job-title {
+    text-align: start;
+    margin-bottom: .2em;
+}
+
+.job-duties ul>li {
+    list-style-type: disc;
+    margin-left: 1em;
+}
+
+/*  6. Education */
+.education {
+    padding: 1em 1.5em;
+}
+
+.school-name {
+    text-align: start;
+}
+
+.school-name h3 {
+    font-weight: 100;
+}
+
+.classes h3 {
+    margin-bottom: .5em;
+}
+
+.classes>ul>li {
+    list-style-type: disc;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
