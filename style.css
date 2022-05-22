@@ -28,20 +28,20 @@ p {
     font-size: var(--fnt-size-small);
 }
 
-.title {
-    color: #ea526f;
-    font-family: var(--fnt-family-Open-Sans);
-    font-size: var(--fnt-size-lrg);
-    margin-bottom: .5em;
-    margin-left: .5em;
-}
-
 ul li {
     list-style-type: none;
 }
 
 span {
     font-weight: 100;
+}
+
+.title {
+    color: #ea526f;
+    font-family: var(--fnt-family-Open-Sans);
+    font-size: var(--fnt-size-lrg);
+    margin-bottom: .5em;
+    margin-left: .5em;
 }
 
 :root {
@@ -64,21 +64,21 @@ span {
     border-bottom: 2px solid black;
     color: var(--fnt-color-white);
     display: flex;
+    flex-wrap: wrap;
     font-family: var(--fnt-family-Open-Sans);
     font-size: 1rem;
     gap: 3em;
-    text-align: start;
+    padding: 1.2em;
 }
 
 .header>* {
-    flex: 1 1 100%;
+    flex: 0 1 0;
 }
 
 img {
     border-radius: 50%;
     height: auto;
-    margin: 0 0 0 1em;
-    max-width: 20em;
+    width: clamp(10em, 50vw, 20em);
 }
 
 .header div:nth-child(2) {
@@ -88,12 +88,12 @@ img {
 }
 
 .header div>h1 {
-    font-size: 4rem;
+    font-size: clamp(2rem, 10vw, 4rem);
     white-space: nowrap;
 }
 
 .header div>p {
-    font-size: var(--fnt-size-small);
+    font-size: clamp(.8rem, 2vw, 1.1rem);
 }
 
 .contact ul li {
@@ -110,6 +110,12 @@ img {
     font-size: 1.3rem;
 }
 
+@media (max-width: 450px) {
+    .header div:first-child {
+        margin: auto;
+    }
+}
+
 /*  3. Intro */
 .intro-header {
     text-align: center;
@@ -117,8 +123,19 @@ img {
 
 .intro {
     margin: auto;
+    max-width: 125ch;
     text-align: center;
-    width: 125ch;
+}
+
+@media (max-width: 822px) {
+    .intro-header {
+        text-align: start;
+    }
+
+    .intro {
+        margin: 0;
+        text-align: start;
+    }
 }
 
 /* 4. Skills */
@@ -127,10 +144,10 @@ img {
     flex-direction: column;
 }
 
-/*  4.1. Personal */
+/*  4.1. Personal skills */
 .personal {
     margin-bottom: 1em;
-    width: 75ch;
+    max-width: 75ch;
 }
 
 .personal ul li {
@@ -139,19 +156,39 @@ img {
     margin-left: 1.5em;
 }
 
-/*  4.2. Programming */
-.programming {
+/*  4.2. Technical skills */
+.technical {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.programming ul {
+.technical ul {
     border-right: 2px solid black;
     margin-right: 2em;
     padding-right: 2em;
 }
 
-.programming ul:last-child {
+.technical ul:last-child {
     border-right: none;
+}
+
+@media (max-width: 694px) {
+    .technical {
+        flex-direction: column;
+        width: 10em;
+    }
+
+    .technical ul {
+        margin-bottom: 1em;
+    }
+
+    .technical ul li {
+        margin-bottom: .5em;
+    }
+
+    .technical ul:last-child {
+        border-right: 2px solid black;
+    }
 }
 
 /*  5. Experience */
