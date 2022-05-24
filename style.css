@@ -120,6 +120,22 @@ img {
     }
 }
 
+@media (min-width: 1240px) {
+    .header {
+        flex-wrap: nowrap;
+    }
+
+    .header>* {
+        flex: 1 1 100%;
+    }
+
+    .header div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 /*  3. Intro */
 .intro-header {
     text-align: center;
