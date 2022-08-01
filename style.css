@@ -5,13 +5,19 @@
   padding: 0;
 }
 
+body {
+  max-width: 930px;
+  margin: auto;
+  border: #ea526f solid 2px;
+}
+
 section {
   padding: 0.5em 1.5em;
 }
 
 hr {
-  background-color: black;
-  border-color: black;
+  background-color: #ea526f;
+  border-color: #ea526f;
   margin-bottom: 2em;
   margin-top: 2em;
   width: 100%;
@@ -48,7 +54,7 @@ span {
   --fnt-family-Open-Sans: 'Open Sans', sans-serif;
   --fnt-family-Merriweather: 'Merriweather' sans-serif;
 
-  --fnt-size-small: 1.1rem;
+  --fnt-size-small: clamp(0.9rem, 2vw, 1.1rem);
   --fnt-size-medium: 1.5rem;
   --fnt-size-lrg: 1.8rem;
 
@@ -59,64 +65,41 @@ span {
 /* 2. Header */
 
 .header {
-  align-items: center;
   background-color: #23b5d3;
-  border-bottom: 2px solid black;
-  color: var(--fnt-color-white);
-  display: flex;
-  flex-wrap: wrap;
+  border-bottom: 2px solid #ea526f;
   font-family: var(--fnt-family-Open-Sans);
-  font-size: 1rem;
-  gap: 3em;
   padding: 1.2em;
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  justify-items: center;
+  gap: 3em;
 }
 
-.header > * {
-  flex: 1 1 0;
+.header p {
+  white-space: nowrap;
 }
 
-.header div:first-child {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-img {
-  border-radius: 50%;
-  height: clamp(10em, 50vw, 15em);
-  width: clamp(10em, 50vw, 15em);
-}
-
-.header div:nth-child(2) {
-  color: var(--fnt-color-black);
-  font-family: var(--fnt-family-Merriweather);
+.name {
+  grid-column: span 2;
   text-align: center;
 }
 
-.header div > h1 {
+.name h1 {
   font-size: clamp(2rem, 10vw, 4rem);
   white-space: nowrap;
 }
 
-.header div > p {
-  font-size: clamp(0.8rem, 2vw, 1.1rem);
-}
-
-.contact ul li {
-  font-size: var(--fnt-size-small);
-  text-align: start;
-}
-
 .contact a {
-  color: white;
-  transition: font-size 0.5s;
+  color: black;
+  transition: color 0.5s;
 }
 
 .contact a:hover {
-  font-size: 1.3rem;
+  color: #ea526f;
 }
 
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .header div:first-child {
     margin: auto;
   }
@@ -146,7 +129,7 @@ img {
   html {
     background-color: #ea526f;
   }
-}
+} */
 
 /*  3. Intro */
 .intro-header {
