@@ -5,10 +5,10 @@
   padding: 0;
 }
 
-body {
-  max-width: 930px;
-  margin: auto;
+.main {
   border: #ea526f solid 2px;
+  margin: auto;
+  max-width: 930px;
 }
 
 section {
@@ -38,10 +38,6 @@ ul li {
   list-style-type: none;
 }
 
-span {
-  font-weight: 100;
-}
-
 .title {
   color: #ea526f;
   font-family: var(--fnt-family-Open-Sans);
@@ -55,11 +51,8 @@ span {
   --fnt-family-Merriweather: 'Merriweather' sans-serif;
 
   --fnt-size-small: clamp(0.9rem, 2vw, 1.1rem);
-  --fnt-size-medium: 1.5rem;
-  --fnt-size-lrg: 1.8rem;
-
-  --fnt-color-white: white;
-  --fnt-color-black: black;
+  --fnt-size-medium: clamp(1.2rem, 5vw - 1rem, 1.5rem);
+  --fnt-size-lrg: clamp(1.4rem, 5vw - 1rem, 1.8rem);
 }
 
 /* 2. Header */
@@ -67,13 +60,13 @@ span {
 .header {
   background-color: #23b5d3;
   border-bottom: 2px solid #ea526f;
-  font-family: var(--fnt-family-Open-Sans);
-  padding: 1.2em;
-  font-size: 1rem;
   display: grid;
+  font-family: var(--fnt-family-Open-Sans);
+  font-size: 1rem;
+  gap: 3em;
   grid-template-columns: repeat(2, minmax(auto, 1fr));
   justify-items: center;
-  gap: 3em;
+  padding: 1.2em;
 }
 
 .header p {
@@ -90,49 +83,46 @@ span {
   white-space: nowrap;
 }
 
+.contact span {
+  color: #ea526f;
+  font-weight: 600;
+}
+
 .contact a {
   color: black;
   transition: color 0.5s;
 }
 
 .contact a:hover {
-  color: #ea526f;
+  color: white;
 }
 
-/* @media screen and (max-width: 450px) {
-  .header div:first-child {
-    margin: auto;
-  }
-
+@media screen and (max-width: 720px) {
   .header {
-    justify-content: center;
+    gap: 1em;
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    grid-column: span 2;
+    width: 50%;
+  }
+
+  .contact > * {
+    flex: 1 1 100%;
   }
 }
 
-@media screen and (max-width: 1109px) {
-  .header > * {
-    flex: 0 1 0;
-  }
-
-  .header div:first-child {
-    display: block;
+@media screen and (max-width: 515px) {
+  .header p {
+    white-space: initial;
   }
 }
-
-@media screen and (min-width: 1300px) {
-  body {
-    width: 1300px;
-    margin: auto;
-    background-color: white;
-  }
-
-  html {
-    background-color: #ea526f;
-  }
-} */
 
 /*  3. Intro */
-.intro-header {
+/* .intro-header {
   text-align: center;
 }
 
@@ -151,7 +141,7 @@ span {
     margin: 0;
     text-align: start;
   }
-}
+} */
 
 /* 4. Skills */
 .skills {
