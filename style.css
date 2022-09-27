@@ -121,35 +121,13 @@ ul li {
   }
 }
 
-/*  3. Intro */
-/* .intro-header {
-  text-align: center;
-}
-
-.intro {
-  margin: auto;
-  max-width: 125ch;
-  text-align: center;
-}
-
-@media screen and (max-width: 822px) {
-  .intro-header {
-    text-align: start;
-  }
-
-  .intro {
-    margin: 0;
-    text-align: start;
-  }
-} */
-
-/* 4. Skills */
+/* 3. Skills */
 .skills {
   display: flex;
   flex-direction: column;
 }
 
-/*  4.1. Personal skills */
+/*  3.1. Personal skills */
 .personal {
   margin-bottom: 1em;
   max-width: 75ch;
@@ -161,7 +139,7 @@ ul li {
   margin-left: 1.5em;
 }
 
-/*  4.2. Technical skills */
+/*  3.2. Technical skills */
 .technical {
   display: flex;
   flex-wrap: wrap;
@@ -196,7 +174,7 @@ ul li {
   }
 }
 
-/*  5. Experience */
+/*  4. Experience */
 .experience {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -211,7 +189,7 @@ ul li {
   margin-left: 1em;
 }
 
-/*  6. Education */
+/*  5. Education */
 .school-name h3 {
   font-weight: 100;
 }
