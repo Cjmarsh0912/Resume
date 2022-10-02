@@ -1,205 +1,180 @@
-/* 1. General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.main {
-  border: #ea526f solid 2px;
+main {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
   margin: auto;
-  max-width: 930px;
+  font-family: 'Roboto', sans-serif;
+  border: 2px black solid;
 }
 
-section {
-  padding: 0.5em 1.5em;
+article {
+  padding: 0 1.5rem;
 }
 
-hr {
-  background-color: #ea526f;
-  border-color: #ea526f;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  width: 100%;
-}
-
-header {
-  font-family: var(--fnt-family-Merriweather);
-  font-size: var(--fnt-size-medium);
-  margin-bottom: 1em;
-}
-
-p {
-  font-family: var(--fnt-family-Open-Sans);
-  font-size: var(--fnt-size-small);
-}
-
-ul li {
-  list-style-type: none;
-}
-
-.title {
-  color: #ea526f;
-  font-family: var(--fnt-family-Open-Sans);
-  font-size: var(--fnt-size-lrg);
-  margin-bottom: 0.5em;
-  margin-left: 0.5em;
-}
-
-:root {
-  --fnt-family-Open-Sans: 'Open Sans', sans-serif;
-  --fnt-family-Merriweather: 'Merriweather' sans-serif;
-
-  --fnt-size-small: clamp(0.9rem, 2vw, 1.1rem);
-  --fnt-size-medium: clamp(1.2rem, 5vw - 1rem, 1.5rem);
-  --fnt-size-lrg: clamp(1.4rem, 5vw - 1rem, 1.8rem);
-}
-
-/* 2. Header */
-
-.header {
-  background-color: #23b5d3;
-  border-bottom: 2px solid #ea526f;
-  display: grid;
-  font-family: var(--fnt-family-Open-Sans);
-  font-size: 1rem;
-  gap: 3em;
-  grid-template-columns: repeat(2, minmax(auto, 1fr));
-  justify-items: center;
-  padding: 1.2em;
-}
-
-.header p {
-  white-space: nowrap;
-}
-
-.name {
-  grid-column: span 2;
-  text-align: center;
-}
-
-.name h1 {
-  font-size: clamp(2rem, 10vw, 4rem);
-  white-space: nowrap;
-}
-
-.contact span {
-  color: #ea526f;
-  font-weight: 600;
-}
-
-.contact a {
-  color: black;
-  transition: color 0.5s;
-}
-
-.contact a:hover {
-  color: white;
-}
-
-@media screen and (max-width: 720px) {
-  .header {
-    gap: 1em;
-  }
-
-  .contact {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    grid-column: span 2;
-    width: 50%;
-  }
-
-  .contact > * {
-    flex: 1 1 100%;
-  }
-}
-
-@media screen and (max-width: 515px) {
-  .header p {
-    white-space: initial;
-  }
-}
-
-/* 3. Skills */
-.skills {
-  display: flex;
-  flex-direction: column;
-}
-
-/*  3.1. Personal skills */
-.personal {
-  margin-bottom: 1em;
-  max-width: 75ch;
-}
-
-.personal ul li {
-  list-style-type: disc;
-  margin-bottom: 1em;
-  margin-left: 1.5em;
-}
-
-/*  3.2. Technical skills */
-.technical {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.technical ul {
-  border-right: 2px solid black;
-  margin-right: 2em;
-  padding-right: 2em;
-}
-
-.technical ul:last-child {
-  border-right: none;
-}
-
-@media screen and (max-width: 818px) {
-  .technical {
-    flex-direction: column;
-    width: 10em;
-  }
-
-  .technical ul {
-    margin-bottom: 1em;
-  }
-
-  .technical ul li {
-    margin-bottom: 0.5em;
-  }
-
-  .technical ul:last-child {
-    border-right: 2px solid black;
-  }
-}
-
-/*  4. Experience */
-.experience {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.job-title {
+h1 {
+  font-size: 2rem;
   margin-bottom: 0.2em;
 }
 
-.job-duties ul > li {
-  list-style-type: disc;
-  margin-left: 1em;
+a {
+  color: white;
 }
 
-/*  5. Education */
-.school-name h3 {
-  font-weight: 100;
+img {
+  width: 1.3rem;
+  aspect-ratio: 1/1;
 }
 
-.classes h3 {
+.space {
+  margin-top: 2rem;
+}
+
+.title {
+  border-top: black solid 2px;
+  border-bottom: black solid 2px;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  main {
+    display: block;
+  }
+
+  .resume {
+    padding: 0 1rem !important;
+  }
+
+  .space {
+    margin-top: 0;
+  }
+
+  .portfolio {
+    margin-bottom: 1rem;
+  }
+
+  .contact {
+    border-right: none !important;
+  }
+}
+
+/* Contact */
+
+.contact {
+  border-right: 2px black solid;
+  background-color: #698996;
+  color: white;
+}
+
+.contact h2 {
+  font-size: 1.3rem;
+}
+
+.contact h3 {
+  font-size: 0.9rem;
+}
+
+.contact p,
+.contact a {
+  font-size: 0.8rem;
+}
+
+.name {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info > *,
+.name {
+  padding: 0 1rem;
+}
+
+.contact-header {
+  background-color: #3b4d54;
   margin-bottom: 0.5em;
 }
 
-.classes > ul > li {
-  list-style-type: disc;
+.contact-me,
+.portfolio-linkedIn {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   margin-bottom: 1em;
-  margin-left: 2em;
+  margin-top: 1em;
+}
+
+/* Resume */
+
+.resume {
+  padding-right: 2rem;
+  min-width: 0;
+}
+
+.resume p {
+  font-size: 0.9rem;
+}
+
+.core-skills,
+.technical-skills,
+.coursework ul {
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.technical-skills > * {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skill {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  flex: 0 1 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  aspect-ratio: 1/1;
+}
+
+/* Experience */
+
+.job {
+  display: flex;
+  gap: 3rem;
+}
+
+.job-description {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.job-tasks ul {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+/* Education */
+
+.school {
+  display: flex;
+  gap: 3rem;
+}
+
+.coursework {
+  margin-top: 1rem;
 }
