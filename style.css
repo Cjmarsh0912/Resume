@@ -42,7 +42,7 @@ img {
   border-bottom: black solid 2px;
   padding: 1rem 0;
   margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 650px) {
@@ -58,8 +58,8 @@ img {
     margin-top: 0;
   }
 
-  .portfolio {
-    margin-bottom: 1rem;
+  .portfolio > div {
+    margin-bottom: 1em;
   }
 
   .contact {
@@ -103,7 +103,8 @@ img {
 }
 
 .contact-me,
-.portfolio-linkedIn {
+.social,
+.portfolio {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -122,7 +123,6 @@ img {
   font-size: 0.9rem;
 }
 
-.core-skills,
 .technical-skills,
 .coursework ul {
   padding: 1rem 2rem;
@@ -134,7 +134,8 @@ img {
 
 .technical-skills > * {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  row-gap: 3rem;
   flex-wrap: wrap;
 }
 
@@ -168,7 +169,61 @@ img {
   flex-direction: column;
 }
 
+/* Projects */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project li {
+  font-size: 0.9rem;
+}
+
+.project-header {
+  display: flex;
+  gap: 2rem;
+}
+
+.project-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.languages {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.languages p:not(.languages p:last-child) {
+  border-right: solid black 2px;
+  padding-right: 1rem;
+}
+
+.project-header span {
+  padding: 0 1rem;
+}
+
+.project-header a {
+  color: black;
+}
+
+.first {
+  border-right: solid black 2px;
+}
+
+.project-description {
+  padding: 1rem 2rem;
+}
+
 /* Education */
+
+.experience {
+  margin-bottom: 100rem;
+}
 
 .school {
   display: flex;
